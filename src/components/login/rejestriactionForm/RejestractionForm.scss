@@ -1,0 +1,50 @@
+@import "styles/main";
+
+.registrationForm{
+  width: 290px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 70px;
+  padding: 0px 50px 0px 50px;
+}
+
+.registrationForm__header{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  text-align: center;
+  color: $dark;
+}
+
+.section__switch{
+  display: flex;
+}
+
+.registrationForm__line{
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  height: 2px;
+  background-color: $primary-color;
+  border: none;
+}
+
+@media only screen and (max-device-width:768px) {
+
+  .registrationForm{
+    width: 290px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .registrationForm__header{
+    font-size: 30px;
+    line-height: 41px;
+  }
+
+}

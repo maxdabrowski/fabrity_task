@@ -1,0 +1,141 @@
+@import "styles/main";
+
+.newsItem{
+  width: calc(50% - 30px);
+  min-height: auto;
+  margin: 15px;
+  float: left;
+  position: relative;
+
+  figure{
+    margin: 0px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    position: absolute; 
+    top: 110px;
+
+    img{      
+      position: absolute;
+      width: 100%;
+      top: -110px;
+      clip:rect(100px, auto, 300px, auto);
+    }
+  }
+}
+
+.newsItem__title{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px; 
+  display: flex;
+  margin-bottom: 10px;
+  color: $dark;
+}
+
+.newsItem__title--icon{
+  margin-right: 10px
+}
+
+.newsItem__date{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+
+.newsItem__text{
+  margin-top: 210px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 200%;
+  color: $dark;
+}
+
+@media only screen and (max-device-width:425px) {
+
+  .newsItem{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    float: none;
+    border: 1px solid $backgroud-color;
+    margin-bottom: 40px;
+    position: relative;
+ 
+    figure{
+      max-width: 40%;
+      width: 40%;
+      display: flex;
+      position: absolute; 
+      top: 110px;
+
+      img{     
+        max-width: 100%;
+        clip:rect(auto, auto, auto, auto);
+      }
+    }
+
+    .newsItem__title--icon, .newsItem__date{
+      display: none;
+    }
+
+    .newsItem__title{
+      position: absolute;
+      font-size: 18px;
+      line-height: 25px;
+      margin-left: 45%;
+      margin-top: 20px;
+    }
+
+    .newsItem__text{
+      margin-top: 140px;
+    }
+    
+  }
+}
+
+@media only screen and (max-width:768px) and (min-width:426px) {
+
+  .newsItem{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 40px;
+ 
+    figure{
+      max-width: 100%;
+      width: 100%;
+      top: 60px;
+
+      img{     
+        max-width: 100%;
+      }
+    }
+
+    .newsItem__title{
+      font-size: 18px;
+      line-height: 25px;
+      margin: 0px;
+    }
+
+    .newsItem__text{
+      margin-top: 220px;
+    }
+    
+  }
+}
+
+@media only screen and  (min-width:1441px) {
+
+  .newsItem{
+    figure{
+      top: 80px;
+    }
+  }
+
+  .newsItem__text{
+    margin-top: 230px;
+  }
+}

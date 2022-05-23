@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+$white: #FFFFFF;
+$gray: #7D7C83;
+$dark: #272727;
+$red: #EB5757;
+$primary-color: #F49E4C;
+$secondary-color: #E06D00;
+$error-color: #EB5757;
+$backgroud-color: #F7F9FB;
+
+// -------------------style dla przycisków----------------------
+@mixin button {
+  padding: 10px 30px;
+  height: 40px;
+  width: 230px ;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  font-style: normal;
+  display: block;
+  margin: 0 auto;
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.primary-button{
+ @include button;
+ color: $white;
+ background-color: $primary-color;
+ 
+ &:hover{
+  background-color: $secondary-color;
+ }
+}
+
+.secondary-button{
+  @include button;
+  color: $primary-color;
+  background-color: $white;
+  border: 3px solid $primary-color;
+
+  &:hover{
+    color: $white;
+   background-color: $primary-color;
+  }
+ }
+
+ // ---------------style dla linków odsyłających -------------------
+.link{
+  color: $primary-color;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  margin: 10px;
+  font-family: 'Open Sans';
+  font-style: normal;
+
+  &:hover{
+    color: $secondary-color;
+  }
+
+}
+
+// ---------------style dla formularza input------------------------
+
+.formSection{
+  position: relative;
+  height: 73px;
+  z-index: 1;
+}
+
+.formSection__input{
+  position: absolute;
+  height: 40px;
+  width: 223px;
+  padding-left: 20px;
+  padding-right: 40px;
+  outline: none;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-top: 20px;
+  z-index: 3;
+  &:focus{
+    border: 1px solid $primary-color;
+  }
+}
+
+.formSection__input--error{
+  border: 1px solid $error-color;
+}
+
+.formSection__label{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: $gray;
+  background-color: $white;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: absolute;
+  top:32px;
+  left:10px;
+  z-index: 2;
+}
+
+.formSection input:not([disabled]):focus~.formSection__label,
+.formSection input:not(:placeholder-shown)  + .formSection__label 
+{
+  -webkit-transform:  translateY(-21px) translateX(0px);
+  transform: translateY(-21px) translateX(0px);
+  z-index: 5;
+}
+
+.formSection__input--typeChange{
+  
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  z-index: 7;
+
+  svg{
+    font-size: 25px;
+    color: $gray;
+  }
+}
+
+.formSection__error{
+  position: absolute;
+  top: 65px;
+  color: $error-color;
+  font-family: 'Khula';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+}
+
+// ------------------style dla checkbox-------------------------
+
+.formSection__checkbox{
+  margin-top: 20px;
+  height: 80px;
+  position: relative;
+}
+
+.formSection__checkobox--input {
+  width: 20px;
+  height: 20px;
+  background: $primary-color;
+  box-sizing: border-box;
+  border-radius: 5px;
+  -moz-appearance:none;
+	-webkit-appearance:none;
+	-o-appearance:none;
+	content: none;	
+  outline: none;
+  border: none !important;
+
+  &:checked::before{
+    background: $secondary-color;
+    color: #FFFFFF !important;
+  }
+
+  &::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: '\f00c';
+    font-size: 10px;
+    text-align: center;
+    color: transparent !important;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    line-height: 20px;
+  }
+
+}
+
+.formSection__checkbox--label{
+  position: absolute;
+  left: 30px;
+  width: 250px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 4px;
+  color: $dark;
+  justify-content: center;
+}
+
+.formSection__checkbox--error{
+  color: $error-color;
+  font-family: 'Khula';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+  padding-top: 10px;
+}
+
+
+//--------------style dla switch checkbox-------------
+
+.formSection__switch{
+  display: flex;
+  height: 50px;
+  margin-top: 15px;
+
+  span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    padding-top: 3px;
+    padding-left: 10px;
+  }
+}
+
+.formSection__switch--input{
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+  width: 40px;
+  height: 15px;
+  -moz-appearance:none;
+	-webkit-appearance:none;
+	-o-appearance:none;
+	content: none;	
+  outline: none;
+  border: none;
+  
+  
+  &:checked + .formSection__switch--label {
+    background: $primary-color; 
+  }
+
+  &:checked + .formSection__switch--label:after {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+  }
+}
+
+.formSection__switch--label {
+  cursor: pointer;
+	text-indent: -9999px;
+	width: 45px;
+	height: 20px;
+	background: grey;
+	display: block;
+	border-radius: 20px;
+	position: relative;
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.3s;
+  }
+
+  &:active:after{
+    width: 2px;
+  }
+}
+
+@media only screen and (max-device-width:425px) {
+
+  .formSection__label{
+    background-color: $backgroud-color;
+  }
+
+}

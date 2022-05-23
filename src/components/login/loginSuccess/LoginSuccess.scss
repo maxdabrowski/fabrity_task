@@ -1,0 +1,45 @@
+@import "styles/main";
+
+.loginSuccess{
+  width: 290px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 250px;
+  padding: 0px 50px 50px 50px;
+}
+
+.loginSuccess__header{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  text-align: center;
+  color: $primary-color;
+}
+
+
+.loginSuccess__header{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  text-align: center;
+  color: $primary-color;
+}
+
+@media only screen and (max-device-width:425px) {
+
+  .loginSuccess{
+    margin-top: 50px;
+    height: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .loginSuccess__header{
+    font-size: 30px;
+    line-height: 41px;
+  }
+
+
+}

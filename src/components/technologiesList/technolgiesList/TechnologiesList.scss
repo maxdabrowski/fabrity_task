@@ -1,0 +1,56 @@
+@import "styles/main";
+
+.technologiesList{
+  margin: 50px 100px 50px 100px;
+}
+
+.technologiesList__header{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  text-align: center;
+  color: $dark;
+  margin-bottom: 30px;
+}
+
+.technologiesList__elements{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+@media only screen and (max-device-width:425px) {
+
+  .technologiesList{
+    margin: 50px 0px 50px 0px;
+  }
+
+  .technologiesList__header{
+    font-size: 30px;
+    line-height: 41px;
+  }
+  
+  .technologiesList__elements{
+    display: block;
+  }
+}
+
+@media only screen and (max-width:768px) and (min-width:426px) {
+
+  .technologiesList{
+    margin: 20px 20px 20px 20px;
+  }
+
+  .techlologiesList__elements{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width:1024px) and (min-width:769px){
+
+  .technologiesList{
+    margin: 50px 50px 50px 50px;
+  }
+
+}

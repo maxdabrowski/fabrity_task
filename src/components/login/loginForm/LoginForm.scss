@@ -1,0 +1,41 @@
+@import "styles/main";
+
+.loginForm{
+  width: 290px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 160px;
+  padding: 0px 50px 0px 50px;
+}
+
+.loginForm__header{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  text-align: center;
+  color: $dark;
+}
+
+.section__switch{
+  display: flex;
+}
+
+@media only screen and (max-device-width:768px) {
+
+  .loginForm{
+    width: 290px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .loginForm__header{
+    font-size: 30px;
+    line-height: 41px;
+  }
+
+}

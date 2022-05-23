@@ -1,0 +1,94 @@
+@import "styles/main";
+
+.loginSection{
+  margin: 0px 100px 0px 100px;
+  height: 680px;
+  background: $white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  display: flex;
+
+  figure{
+    margin: 0px;
+    max-width: 50%;
+
+    img{
+      border-radius: 20px 0px 0px 20px;
+    }
+
+  }
+
+}
+
+.loginSection__form{
+  margin: 0 auto;
+  background-color: $white;
+}
+
+@media only screen and (max-device-width:425px) {
+
+  .loginSection{
+    display: block;
+    margin: 0px 0px 0px 0px;
+    box-shadow: none;
+    border-radius: 0px;
+    height: auto;
+    background-color: $backgroud-color;
+
+    figure{
+      margin: 0px;
+      max-width: 100%;
+
+      img{
+        border-radius: 0px 0px 0px 0px;
+        max-width: 100%;
+      }
+  
+    }
+
+    .loginSection__form{
+      margin: 0 auto;
+      background-color: $backgroud-color;
+     }
+     
+  }
+
+  .loginForm__header{
+    font-size: 30px;
+    line-height: 41px;
+  }
+
+}
+
+@media only screen and (max-width:768px) and (min-width:426px) {
+
+  .loginSection{
+    display: block;
+    margin: 0px 50px 0px 50px;
+    border-radius: 20px;
+
+    height: auto;
+
+    figure{
+      margin: 0px;
+      max-width: 100%;
+
+      img{
+        border-radius: 20px 20px 0px 0px;
+        max-width: 100%;
+        width: 100%;
+      }
+  
+    }
+  }
+
+  .loginForm__header{
+    font-size: 30px;
+    line-height: 41px;
+  }
+
+  .loginSection__form{
+    border-radius: 20px;
+   }
+  
+}
